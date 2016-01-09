@@ -1,0 +1,137 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+     
+  
+{% block body%}
+{% block content %}
+
+
+<div class="login-box">
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link">Login</a>
+   <!--   <a href="#" id="signup-box-link">Sign Up</a> -->
+    </div>
+    <div class="social-login">
+      <a href="#" class="facebook">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+      <a href="/accounts/google/login/" class="google">
+        <i class="fa fa-google-plus fa-lg"></i>
+        log in with Google
+      </a>
+
+      <a href="/accounts/github/login" class="github">
+        <i class="fa fa-github fa-lg"></i>
+        log in with GitHub
+      </a>
+       <a href="#" class="bitbucket">
+        <i class="fa fa-bitbucket fa-lg"></i>
+        log in with Bitbucket
+      </a>
+      <a href="/accounts/linkedin/login" class="linkedin">
+        <i class="fa fa-linkedin fa-lg"></i>
+        log in with LinkedIn
+      </a>
+
+      <a href="/accounts/twitter/login" class="twitter">
+        <i class="fa fa-twitter fa-lg"></i>
+        log in with Twitter
+      </a>
+    </div>
+    <!--
+    <form class="email-login">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Log in</button>
+      </div>
+      -->
+<form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                <div class="u-form-group">
+                {{ form.as_p }}
+           
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                     </div>
+             <!--   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>-->
+             <div class="u-form-group">
+               <button class="primaryAction" type="submit" >{% trans "Log In" %}</button> 
+               </div>
+              </form>
+
+
+      <div class="u-form-group">
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+    </form>
+  <!--  <form class="email-signup">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Sign Up</button>
+      </div>
+    </form>-->
+  </div>
+
+<!--
+<div class="body"></div>
+    <div class="grad"></div>
+    <br>
+          <div class="login">
+             <div>
+                  <h1>{% trans "Sign In" %}</h1>
+
+-->
+                  
+                  <!--
+                  {% get_providers as socialaccount_providers %}
+
+                  {% if socialaccount_providers %}
+                        <p>{% blocktrans with site.name as site_name %}Please sign in with one of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                        for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+                      <div class="socialaccount_ballot">
+
+                          <ul class="socialaccount_providers">
+                              {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                          </ul>
+
+                           <div class="login-or">{% trans 'or' %}</div>
+
+                      </div>
+
+                          {% include "socialaccount/snippets/login_extra.html" %}
+
+                          {% else %}
+                          <p>{% blocktrans %}If you have not created an account yet, then please
+                          <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                      {% endif %}
+                      
+              </div> 
+             
+            -->
+</div>
+      
+    <script src='/static/js/jquery-2.1.1.min.js'></script>
+    <script src='/static/js/index.js'></script>
+{% endblock %}
+{% endblock %}

@@ -1,4 +1,6 @@
-my_env 
+env_project
 *DS_Store 
 *.pyc 
 __pychache__
+tmp
+mydatabase

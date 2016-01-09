@@ -20,7 +20,9 @@ from django.conf.urls import include, url
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
+    #url(r'^accounts/social/signup/$', 'django.contrib.auth.views.logout', {'next_page': '/'}),
     url(r'^accounts/', include('allauth.urls')),
-    url(r'^myapp/$',include('myapp.urls')),
+    url(r'^',include('myapp.urls')),
 
 ]

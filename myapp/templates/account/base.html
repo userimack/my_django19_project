@@ -1,0 +1,38 @@
+{%  load staticfiles  %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Home-{% block head_title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS 
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+   
+   <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href='/static/css/style.css'/> -->
+    
+  
+<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}"/>
+<link rel="stylesheet" type="text/css" href='/static/css/normalize.css'/>
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css"/>
+
+
+  
+    {% block head_css %}{% endblock %}
+    {% block head_javascript %}{% endblock %}
+
+</head>
+<body>
+
+
+ {% block body %}
+
+
+  {% endblock %}
+
+
+
+
+</body>
+</html>

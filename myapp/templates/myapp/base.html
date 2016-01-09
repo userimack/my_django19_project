@@ -1,0 +1,31 @@
+{%  load staticfiles  %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Home-{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "assets/bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "assets/bootstrap/examples/carousel/carousel.css" %}" rel="stylesheet">
+   
+
+  
+    {% block head_css %}{% endblock %}
+    {% block head_javascript %}{% endblock %}
+
+</head>
+<body>
+
+
+ {% block body %}
+
+
+  {% endblock %}
+
+
+
+
+</body>
+</html>
