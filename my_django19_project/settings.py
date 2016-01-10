@@ -43,14 +43,15 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    #'allauth.socialaccount.providers.facebook',
-     'allauth.socialaccount.providers.google',
-     'allauth.socialaccount.providers.twitter',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
     'allauth.socialaccount.providers.linkedin',
     'allauth.socialaccount.providers.linkedin_oauth2',
-    'allauth.socialaccount.providers.openid',
+    #'allauth.socialaccount.providers.openid',
     'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.bitbucket',
+    #'allauth.socialaccount.providers.bitbucket',
+    #'allauth.socialaccount.providers.stackexchange',
     'django.contrib.admindocs',
 ]
 
@@ -134,7 +135,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
@@ -158,8 +158,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
-        'SCOPE': ['email', 'publish_stream'],
-        'METHOD': 'js_sdk'  # instead of 'oauth2'
+        'SCOPE': ['email', 'publish_actions'],
+        'METHOD': 'oauth2'  #   use 'js_sdk' or 'oauth2'
   },
   'linkedin':
       {'SCOPE': ['r_emailaddress'],
@@ -168,5 +168,7 @@ SOCIALACCOUNT_PROVIDERS = {
                          'last-name',
                          'email-address',
                          'picture-url',
-                         'public-profile-url']}
+                         'public-profile-url']},
+    # 'stackexchange':
+    #     { 'SITE': 'stackoverflow' }
 }
