@@ -7,25 +7,21 @@
 
 {% block body %}
 
-
-
-
 {% block content %} 
-<div class="login-box">
 
-    <div class="lb-header">
-      <a href="#" class="active" id="login-box-link">Login</a>
-   <!--   <a href="#" id="signup-box-link">Sign Up</a> -->
-    </div>
+<div class="lb-header">
+      <a href="/accounts/login/" class="active" id="login-box-link">Login</a>
+      <a href="/accounts/signup/" id="signup-box-link">Sign Up</a> 
+     </div>
    
     <div class="social-login">
-     <div>
+     
       <a href="/accounts/facebook/login/" class="facebook">
         <i class="fa fa-facebook fa-lg"></i>
         Login in with facebook
-      </a>  </div>
+      </a>  
 
-<div>
+
       <a href="/accounts/google/login/" class="google">
         <i class="fa fa-google-plus fa-lg"></i>
         log in with Google
@@ -36,12 +32,12 @@
         log in with GitHub
       </a>
       -->
-      </div>
+     
     <!--   <a href="/accounts/stackexchange/login" class="stackexchange">
         <i class="fa fa-superuser fa-lg"></i>
         log in with Stack Exchange
       </a> -->
-      <div>
+      
       <a href="/accounts/linkedin/login" class="linkedin">
         <i class="fa fa-linkedin fa-lg"></i>
         log in with LinkedIn
@@ -51,7 +47,7 @@
         <i class="fa fa-twitter fa-lg"></i>
         log in with Twitter
       </a>
-      </div>
+      
     </div>
     <!--
     <form class="email-login">
@@ -85,69 +81,14 @@
         <a href="#" class="forgot-password">Forgot password?</a>
       </div>
     </form>
-  <!--  <form class="email-signup">
-      <div class="u-form-group">
-        <input type="email" placeholder="Email"/>
-      </div>
-      <div class="u-form-group">
-        <input type="password" placeholder="Password"/>
-      </div>
-      <div class="u-form-group">
-        <input type="password" placeholder="Confirm Password"/>
-      </div>
-      <div class="u-form-group">
-        <button>Sign Up</button>
-      </div>
-    </form>-->
-  </div>
-
-<!--
-<div class="body"></div>
-    <div class="grad"></div>
-    <br>
-          <div class="login">
-             <div>
-                  <h1>{% trans "Sign In" %}</h1>
-
--->
-                  
-                  <!--
-                  {% get_providers as socialaccount_providers %}
-
-                  {% if socialaccount_providers %}
-                        <p>{% blocktrans with site.name as site_name %}Please sign in with one of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-                        for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-                      <div class="socialaccount_ballot">
-
-                          <ul class="socialaccount_providers">
-                              {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-                          </ul>
-
-                           <div class="login-or">{% trans 'or' %}</div>
-
-                      </div>
-
-                          {% include "socialaccount/snippets/login_extra.html" %}
-
-                          {% else %}
-                          <p>{% blocktrans %}If you have not created an account yet, then please
-                          <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-                      {% endif %}
-                      
-              </div> 
-             
-            -->
-
-</div>
-     
 
 {%endblock%}
 
 {%endblock%}
+
+
 
 {% block javascript %} 
-    <script src='/static/js/jquery-2.1.1.min.js'></script>
-    <script src='/static/js/index.js'></script>
+    
 
 {%endblock%}

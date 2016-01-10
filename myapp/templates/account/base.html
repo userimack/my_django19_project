@@ -22,7 +22,9 @@
     
 </head>
 <body>
+<div class="login-box">
 
+    
 
  {% block body %}
 
@@ -32,6 +34,75 @@
   {% endblock %}
 
 
+
+
+
+
+
+
+
+
+    
+  <!--  <form class="email-signup">
+      <div class="u-form-group">
+        <input type="email" placeholder="Email"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password"/>
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password"/>
+      </div>
+      <div class="u-form-group">
+        <button>Sign Up</button>
+      </div>
+    </form>-->
+  </div>
+
+<!--
+<div class="body"></div>
+    <div class="grad"></div>
+    <br>
+          <div class="login">
+             <div>
+                  <h1>{% trans "Sign In" %}</h1>
+
+-->
+                  
+                  <!--
+                  {% get_providers as socialaccount_providers %}
+
+                  {% if socialaccount_providers %}
+                        <p>{% blocktrans with site.name as site_name %}Please sign in with one of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                        for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+
+                      <div class="socialaccount_ballot">
+
+                          <ul class="socialaccount_providers">
+                              {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                          </ul>
+
+                           <div class="login-or">{% trans 'or' %}</div>
+
+                      </div>
+
+                          {% include "socialaccount/snippets/login_extra.html" %}
+
+                          {% else %}
+                          <p>{% blocktrans %}If you have not created an account yet, then please
+                          <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                      {% endif %}
+                      
+              </div> 
+             
+            -->
+
+</div>
+     
+
+
+<script src='/static/js/jquery-2.1.1.min.js'></script>
+    <script src='/static/js/index.js'></script>
 {% block javascript %}{% endblock %}
 
 

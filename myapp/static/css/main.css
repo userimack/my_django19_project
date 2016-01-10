@@ -4,6 +4,10 @@
    Author's custom styles
    ========================================================================== */
 
+.jumbotron,body{
+  background-image: url(../img/bg.jpg)
+}
+
 
 
 
