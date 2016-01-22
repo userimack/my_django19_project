@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
 ]
 
+
+
 SITE_ID = 1
 
 MIDDLEWARE_CLASSES = [
